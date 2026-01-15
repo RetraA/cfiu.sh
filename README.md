@@ -46,7 +46,7 @@ curl -o cfiu.sh https://raw.githubusercontent.com/RetraA/cfiu.sh/main/cfiu.sh
 chmod +x cfiu.sh
 ```
 ```bash
-sudo bash cfiu.sh
+bash cfiu.sh
 ```
 
 On first run, CFIU will:
@@ -62,7 +62,7 @@ On first run, CFIU will:
 Edit the config file:
 
 ```bash
-sudo nano /etc/cfiu/config.json
+nano /etc/cfiu/config.json
 ```
 
 ### Example configuration
@@ -94,33 +94,30 @@ sudo nano /etc/cfiu/config.json
 ## Usage
 
 ```bash
-sudo bash cfiu.sh
+bash cfiu.sh
 ```
 
 ---
 
 ## Cron 
 
-```
 Create a cronjob in crontab -e to run however often youd like. 
-```
 
 ---
 
 ## Uninstall
 
 ```bash
-sudo bash cfiu.sh -u
+bash cfiu.sh -u
 ```
 
-Remove with dependencies:
+**Remove with dependencies:**
 
-```
+
 **WARNING**
 THIS MAY UNINSTALL DEPENDENCIES REQUIRED BY OTHER PROGRAMS!!
-```
 ```bash 
-sudo ./cfiu.sh -u --deps 
+bash cfiu.sh -u --deps 
 ```
 
 ---
