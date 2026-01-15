@@ -36,7 +36,8 @@ Ideal for home servers, self-hosted services, VPN endpoints, and any system with
 ## Installation
 
 ```bash
-sudo apt install curl
+wget https://raw.githubusercontent.com/RetraA/cfiu.sh/main/cfiu.sh
+OR IF YOU ALREADY HAVE CURL: 
 curl -o cfiu.sh https://raw.githubusercontent.com/RetraA/cfiu.sh/main/cfiu.sh
 chmod +x cfiu.sh
 sudo bash cfiu.sh
