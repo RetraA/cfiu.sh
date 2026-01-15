@@ -36,9 +36,10 @@ Ideal for home servers, self-hosted services, VPN endpoints, and any system with
 ## Installation
 
 ```bash
+sudo apt install curl
 curl -o cfiu.sh https://raw.githubusercontent.com/RetraA/cfiu.sh/main/cfiu.sh
 chmod +x cfiu.sh
-sudo ./cfiu.sh
+sudo bash cfiu.sh
 ```
 
 On first run, CFIU will:
@@ -86,15 +87,15 @@ sudo nano /etc/cfiu/config.json
 ## Usage
 
 ```bash
-sudo ./cfiu.sh
+sudo bash cfiu.sh
 ```
 
 ---
 
-## Cron Example
+## Cron 
 
 ```bash
-* * * * * /usr/bin/bash -c 'mkdir -p /var/log/cfiu; LOG=/var/log/cfiu/cfiu-$(date +\%F).log; /usr/bin/bash /root/cfiu.sh >> "$LOG" 2>&1'
+Create a cronjob in crontab -e to run however often youd like. 
 ```
 
 ---
@@ -118,3 +119,5 @@ sudo ./cfiu.sh -u --deps
 ## License
 
 MIT License
+
+- Retra
