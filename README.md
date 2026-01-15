@@ -36,7 +36,7 @@ Ideal for home servers, self-hosted services, VPN endpoints, and any system with
 ## Installation
 
 ```bash
-curl -o cfiu.sh https://github.com/RetraA/cfiu.sh/blob/main/cfiu.sh
+curl -o cfiu.sh https://raw.githubusercontent.com/RetraA/cfiu.sh/main/cfiu.sh
 chmod +x cfiu.sh
 sudo ./cfiu.sh
 ```
