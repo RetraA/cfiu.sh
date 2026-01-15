@@ -1,23 +1,23 @@
 # CFIU — Cloudflare IP Updater
 
-CFIU is a fully automated Bash script that keeps Cloudflare DNS records up to date with your system’s current public IPv4 and IPv6 addresses. It is designed for dynamic IP environments and supports **multiple DNS records across multiple Cloudflare zones** using a single configuration file.
+CFIU is a fully automated Bash script that keeps Cloudflare DNS records synchronized with your system’s current public **IPv4 and IPv6** addresses. It is designed for dynamic IP environments and supports **multiple DNS records across multiple Cloudflare zones** using a single configuration file.
 
-Ideal for home servers, self-hosted services, VPN endpoints, and any system with a changing public IP.
+Ideal for home servers, self-hosted services, VPN endpoints, and any system with a frequently changing public IP.
 
 ---
 
 ## Features
 
-- Automatically detects public **IPv4 and IPv6**
-- Updates existing **A and AAAA DNS records**
+- Automatic public **IPv4 and IPv6** detection
+- Updates existing **A and AAAA** DNS records
 - **Multi-record / multi-zone** support
 - Single JSON configuration file
-- Updates only when the IP changes
+- Updates only when the IP address changes
 - Automatic dependency installation (`curl`, `jq`)
-- Secure config permissions
+- Secure configuration file permissions
 - Root-safe execution with `sudo`
 - Built-in **uninstall mode**
-- Clear, color-coded output
+- Clear, color-coded terminal output
 
 ---
 
@@ -26,46 +26,49 @@ Ideal for home servers, self-hosted services, VPN endpoints, and any system with
 - Bash
 - Cloudflare API token with **DNS edit permissions**
 - Supported package managers:
-  - apt
-  - dnf
-  - yum
-  - pacman
+  - `apt`
+  - `dnf`
+  - `yum`
+  - `pacman`
 
 ---
 
 ## Installation
 
+### Using `wget`
 ```bash
 wget https://raw.githubusercontent.com/RetraA/cfiu.sh/main/cfiu.sh
 ```
-OR IF YOU ALREADY HAVE CURL: 
+
+### Using `curl`
 ```bash
 curl -o cfiu.sh https://raw.githubusercontent.com/RetraA/cfiu.sh/main/cfiu.sh
 ```
+
+Make the script executable and run it:
 ```bash
 chmod +x cfiu.sh
-```
-```bash
 bash cfiu.sh
 ```
 
-On first run, CFIU will:
+### First Run Behavior
+
+On first execution, CFIU will:
 - Install required dependencies
 - Create `/etc/cfiu/config.json`
-- Populate it with example DNS records
-- Exit so you can edit the configuration
+- Populate the file with example DNS records
+- Exit so you can review and edit the configuration
 
 ---
 
 ## Configuration
 
-Edit the config file:
-
+Edit the configuration file:
 ```bash
 nano /etc/cfiu/config.json
 ```
 
-### Example configuration
+### Example Configuration
 
 ```json
 {
@@ -93,31 +96,35 @@ nano /etc/cfiu/config.json
 
 ## Usage
 
+Run the updater manually:
 ```bash
 bash cfiu.sh
 ```
 
 ---
 
-## Cron 
+## Cron
 
-Create a cronjob in crontab -e to run however often youd like. 
+You can automate updates by creating a cron job:
+```bash
+crontab -e
+```
+Schedule the script to run as often as you like (e.g., every minute, every 5 minutes, etc.).
 
 ---
 
 ## Uninstall
 
+Remove CFIU:
 ```bash
 bash cfiu.sh -u
 ```
 
-**Remove with dependencies:**
-
-
-**WARNING**
-THIS MAY UNINSTALL DEPENDENCIES REQUIRED BY OTHER PROGRAMS!!
-```bash 
-bash cfiu.sh -u --deps 
+### Remove with Dependencies (Optional)
+⚠ **WARNING**  
+This may uninstall packages required by other applications.
+```bash
+bash cfiu.sh -u --deps
 ```
 
 ---
@@ -126,4 +133,5 @@ bash cfiu.sh -u --deps
 
 MIT License
 
-- Retra
+© Retra
+
