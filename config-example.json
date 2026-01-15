@@ -1,0 +1,34 @@
+{
+  "API Key": "PASTE YOUR CLOUDFLARE API KEY WITH DNS ZONE PERMISSIONS.",
+  "_comment": "IF YOU HAVE MULTIPLE DOMAINS, USE THE EXAMPLES BELOW. FOR SAME ZONE DNS RECORDS USE THE SAME ZONE ID. IF YOU WANT TO CHECK THE A OR AAAA RECORDS OF A DNS, CLASSIFY IT LIKE THE FIRST EXAMPLE.",
+  "records": [
+    {
+      "Zone Id": "ZONE_ID",
+      "domain": "home.example.com",
+      "types": ["A","AAAA"],
+      "ttl": 120,
+      "proxied": false
+    },
+    {
+      "Zone Id": "ZONE_ID",
+      "domain": "vpn.example.net",
+      "types": ["A"],
+      "ttl": 120,
+      "proxied": false
+    },
+    {
+      "Zone Id": "ZONE_ID",
+      "domain": "nas.example.net",
+      "types": ["A"],
+      "ttl": 300,
+      "proxied": false
+    },
+    {
+      "Zone Id": "ZONE_ID",
+      "domain": "media.example.net",
+      "types": ["A","AAAA"],
+      "ttl": 120,
+      "proxied": true
+    }
+  ]
+}
