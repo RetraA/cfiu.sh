@@ -115,9 +115,11 @@ sudo bash cfiu.sh -u
 
 Remove with dependencies:
 
-```bash
+```
 **WARNING**
-THIS MAY UNINSTALL DEPENDENCIES REQUIRED BY OTHER PROGRAMS!! 
+THIS MAY UNINSTALL DEPENDENCIES REQUIRED BY OTHER PROGRAMS!!
+```
+```bash 
 sudo ./cfiu.sh -u --deps 
 ```
 
