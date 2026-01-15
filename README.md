@@ -108,7 +108,9 @@ sudo ./cfiu.sh -u
 Remove with dependencies:
 
 ```bash
-sudo ./cfiu.sh -u --deps
+**WARNING**
+THIS MAY UNINSTALL DEPENDENCIES REQUIRED BY OTHER PROGRAMS!! 
+sudo ./cfiu.sh -u --deps 
 ```
 
 ---
