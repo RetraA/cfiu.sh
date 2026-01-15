@@ -37,9 +37,15 @@ Ideal for home servers, self-hosted services, VPN endpoints, and any system with
 
 ```bash
 wget https://raw.githubusercontent.com/RetraA/cfiu.sh/main/cfiu.sh
+```
 OR IF YOU ALREADY HAVE CURL: 
+```bash
 curl -o cfiu.sh https://raw.githubusercontent.com/RetraA/cfiu.sh/main/cfiu.sh
+```
+```bash
 chmod +x cfiu.sh
+```
+```bash
 sudo bash cfiu.sh
 ```
 
@@ -95,7 +101,7 @@ sudo bash cfiu.sh
 
 ## Cron 
 
-```bash
+```
 Create a cronjob in crontab -e to run however often youd like. 
 ```
 
@@ -104,7 +110,7 @@ Create a cronjob in crontab -e to run however often youd like.
 ## Uninstall
 
 ```bash
-sudo ./cfiu.sh -u
+sudo bash cfiu.sh -u
 ```
 
 Remove with dependencies:
